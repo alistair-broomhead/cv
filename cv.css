@@ -1,0 +1,117 @@
+body {
+    font-size: 10pt;
+    font-family: "Arial",sans-serif;
+    text-align: justify;
+    /* print preview (sic)
+    width: 656px;
+    */
+}
+
+.bold {
+    font-weight: bold;
+    line-height: 0;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+
+#education, #activities, #skills, #top, .role {
+    overflow: auto;
+    clear: both;
+    background-color: lightgrey;
+    margin: 4px;
+    padding: 4px;
+    border-radius: 3px;
+    box-shadow: 2px 1px grey 2px 2px grey;
+}
+
+.role .prose {
+    float: left;
+    background-color: ivory;
+    width: 70%;
+    padding: 2px;
+    border-radius: 3px;
+    box-shadow: 2px 2px grey 2px 2px grey;
+}
+
+.role .jargon {
+    text-align: left;
+    float: right;
+    background-color: ivory;
+    width: 26.5%;
+    line-height: 0;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 3px;
+    box-shadow: 2px 2px grey 2px 2px grey;
+}
+
+.role .jargon span {
+    background-color: lightblue;
+    line-height: 1.7;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 3px;
+    box-shadow: 2px 1px grey 2px 2px grey;
+}
+
+.role .jargon p {
+    font-weight: bold;
+}
+
+.role-heading {
+    overflow: auto;
+    clear: both;
+    align-content: center;
+    text-align: center;
+    font-weight: bold;
+    padding: 4px;
+    margin: 0 0 4px 0;
+    background-color: ivory;
+    border-radius: 3px;
+    box-shadow: 2px 2px grey 2px 2px grey;
+}
+
+.centre {
+    display: inline;
+}
+
+.centered {
+    text-align: center;
+}
+.sheet-head {
+    background-color: ivory;
+    margin: 4px 4px 8px 4px;
+    padding: 4px;
+    border-radius: 3px;
+    box-shadow: 2px 2px grey 2px 2px grey;
+}
+.sheet {
+    background-color: ivory;
+    margin: 4px;
+    padding: 2px;
+    border-radius: 3px;
+    box-shadow: 2px 2px grey 2px 2px grey;
+}
+
+#contact {
+    line-height: 1.8;
+}
+
+h1 {
+    font-size: 21pt;
+    font-family: "Trebuchet MS",sans-serif;
+    page-break-after: avoid;
+}
+
+h2 {
+    font-size: 16pt;
+    font-family: "Trebuchet MS",sans-serif;
+    page-break-after: avoid;
+}
