@@ -4,13 +4,13 @@
         box-sizing: border-box;
         top: 0;
         display: block;
-        background-color: #4285f4;
         line-height: 1;
         content: "";
         left: -2%;
         position: fixed;
         width: 104%;
         z-index: 22;
+        background-color: #4285f4;
     }
 
     #title {
@@ -18,7 +18,6 @@
         padding: 0 4px 0 3%;
         margin: 18px 0;
         min-width: 180px;
-        color: white;
 
         font-size: 2em;
         font-weight: bold;
@@ -27,8 +26,7 @@
     #contact {
         display: inline-block;
         top: 0;
-        background-color: rgba(255, 255, 255, .15);
-        border-radius: 5px;
+        border-radius: 2px;
         padding: 2px 4px;
         margin: 10px 3% 10px 0;
         min-width: 430px;
@@ -43,21 +41,37 @@
     #contact > div > div {
         float: right;
     }
-}
-@media screen {
-    #top {
-        box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+    @media screen {
+        #top {
+            box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+            color: white;
+        }
+        #contact {
+            color: white;
+            background-color: rgba(255, 255, 255, .15);
+        }
     }
-    #contact {
-        color: white;
-    }
-}
-@media print {
-    #contact {
-        font-size: 8pt;
-    }
-    #contact > div > div > div {
-        margin-right: 8px;
+
+    @media print {
+        #title {
+            padding: 0;
+            margin: 8px;
+        }
+        #top {
+            display: flex;
+            position: static;
+            top: 0;
+            color: white;
+            margin: 0;
+        }
+        #contact {
+            font-size: 8pt;
+            margin: 0 0 0 160px;
+            background-color: #87b2f7;
+        }
+        #contact > div > div > div {
+            margin-right: 8px;
+        }
     }
 }
 
@@ -66,8 +80,12 @@
     #content {
         position: relative;
         margin: 0 auto;
-        width: 650px;
         top: 66px;
+    }
+    @media screen {
+        #content {
+            width: 650px;
+        }
     }
 
     .section {
@@ -77,12 +95,14 @@
         padding: 10px 8px;
         margin-bottom: 50px;
         position: relative;
+        border-radius: 2px;
     }
 
     @media print {
         .section {
+            background: none;
             margin: 0;
-            padding: 10px 4px;
+            padding: 0;
         }
     }
     /* section heading */
@@ -94,20 +114,14 @@
         color: #d23f31;
 
         padding: 6px 6px 0;
-        border-radius: 3px;
+        border-radius: 2px;
     }
     .card {
         background-color: white;
-        margin: 10px -20px;
         color: #212121;
-        box-shadow: rgba(0, 0, 0, 0.156863) 0 0 6px 0, rgba(0, 0, 0, 0.317647) 0 6px 12px 0;
         clear: both;
         overflow: auto;
-    }
-    .card > div {
-        padding: 10px;
-        margin-bottom: 10px;
-        margin-top: 10px;
+        border-radius: 2px;
     }
 
     .role-heading {
@@ -117,60 +131,130 @@
         text-align: center;
         overflow: auto;
         clear: both;
+        border-radius: 2px;
     }
 
     .prose {
+        top: 33px;
         float: left;
         width: 70%;
+        border-radius: 2px;
+    }
+    @media print {
+        .prose {
+            margin-top: 10px;
+        }
     }
 
     .role-description {
         position: relative;
+        padding: 4px;
         top: -20px;
     }
 
     .jargon {
         text-align: left;
         float: right;
-        width: 26.5%;
+        width: 26%;
         line-height: 0;
         margin-bottom: 10px;
+        border-radius: 2px;
+    }
+    @media screen {
+        .todo {
+            padding: 4px;
+            /* noinspection CssOverwrittenProperties */
+            box-shadow: inset springgreen 0 0 4px 4px,
+                        springgreen 3px 3px 4px 4px;
+            /* noinspection CssOverwrittenProperties */
+            box-shadow: inset rgba(0, 255, 0, 0.5) 0 0 2px 2px,
+                        rgba(0, 0, 0, 0.15) 0 0 6px 0,
+                        rgba(0, 0, 0, 0.3) 0 6px 12px 0;
+        }
+        .card {
+            margin: 10px -20px;
+            box-shadow: rgba(0, 0, 0, 0.156863) 0 0 6px 0, rgba(0, 0, 0, 0.317647) 0 6px 12px 0;
+        }
+        .prose{
+            margin-top: 16px;
+            padding: 8px;
+            width: 68%;
+            position: static;
+            display: block;
+            box-shadow: rgba(0, 0, 0, 0.156863) 0 0 6px 0, rgba(0, 0, 0, 0.317647) 0 6px 12px 0;
+        }
+        .jargon {
+            margin-top: 16px;
+            margin-bottom: 0;
+            padding: 4px;
+            box-shadow: rgba(0, 0, 0, 0.156863) 0 0 6px 0, rgba(0, 0, 0, 0.317647) 0 6px 12px 0;
+        }
+        .jargon span {
+            box-shadow: rgba(0, 0, 0, 0.156863) 0 0 2px 0, rgba(0, 0, 0, 0.317647) 0 2px 4px 0;
+            margin: 4px;
+            white-space: nowrap;
+            line-height: 2em;
+        }
+        .card > div {
+            padding: 10px 6px 6px;
+        }
     }
 
     .jargon span {
-        background-color: lightblue;
+        /*jont-weight: bold;*/
         line-height: 1.7;
-        margin: 2px;
+        margin: 3px;
         padding: 2px;
-        border-radius: 3px;
-        box-shadow: 2px 1px grey 2px 2px grey;
+
+    }
+    @media print {
+        .jargon {
+            margin: 12px 0 0;
+        }
+        .card {
+            page-break-inside: avoid;
+        }
+        .role-heading {
+            margin-bottom: 8px;
+            padding: 0 8px;
+        }
     }
 
     .jargon p {
         font-weight: bold;
     }
-}
-/*
-.role {
-    overflow: auto;
-    clear: both;
-    background-color: lightgrey;
-    margin: 4px;
-    padding: 4px;
-    border-radius: 3px;
-    box-shadow: 2px 1px grey 2px 2px grey;
-} */
-@media print {
-    #content {
-        margin: 0;
+    #education span {
+        font-weight: bold;
+        line-height: 0;
+    }
+
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
+    }
+
+    .centre {
+        display: inline;
+    }
+    @media print {
+        #content {
+            margin: 0;
+            background: none;
+            top: 0;
+        }
     }
 }
 
 /* Fix print small device compact layout issues */
-@media print, screen and (max-width: 720px) {
+@media screen and (max-width: 720px) {
     #content {
         top: 60px
     }
+}
+@media print, screen and (max-width: 720px) {
 
     #title {
         font-size: 1.5em
@@ -192,59 +276,25 @@
     }
 }
 
-@media print {
-    #contact {
-        display: block;
-        margin-right: 40px;
-        margin-left: 100px;
-    }
-
-    #top {
-        display: flex;
-        margin-left: 40px;
-        margin-right: 100px;
-    }
-
-    #content {
-        top: 40px;
-    }
-}
-
 /* Generic */
 @media {
     body {
         font-size: 82.5%;
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         text-align: justify;
-        background: #ececec;
+        border-radius: 2px;
     }
-}
-
-.bold {
-    font-weight: bold;
-    line-height: 0;
-}
-
-.left {
-    float: left;
-}
-
-.right {
-    float: right;
-}
-
-.centre {
-    display: inline;
-}
-
-.centered {
-    text-align: center;
-}
-
-.sheet {
-    background-color: ivory;
-    margin: 4px;
-    padding: 2px;
-    border-radius: 3px;
-    box-shadow: 2px 2px grey 2px 2px grey;
+    @media screen {
+        body {
+            background: #ececec;
+        }
+    }
+    @media print {
+        p {
+            margin: 8px;
+        }
+        body {
+            margin: 0;
+        }
+    }
 }
