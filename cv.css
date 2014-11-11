@@ -1,10 +1,223 @@
-body {
-    font-size: 10pt;
-    font-family: "Arial",sans-serif;
-    text-align: justify;
-    /* print preview (sic)
-    width: 656px;
-    */
+/* Heading section */
+@media {
+    #top {
+        box-sizing: border-box;
+        top: 0;
+        display: block;
+        background-color: #4285f4;
+        line-height: 1;
+        content: "";
+        left: -2%;
+        position: fixed;
+        width: 104%;
+        z-index: 22;
+    }
+
+    #title {
+        display: inline-block;
+        padding: 0 4px 0 3%;
+        margin: 18px 0;
+        min-width: 180px;
+        color: white;
+
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    #contact {
+        display: inline-block;
+        top: 0;
+        background-color: rgba(255, 255, 255, .15);
+        border-radius: 5px;
+        padding: 2px 4px;
+        margin: 10px 3% 10px 0;
+        min-width: 430px;
+        float: right;
+        line-height: 1.5;
+    }
+
+    #contact > div {
+        display: block;
+    }
+
+    #contact > div > div {
+        float: right;
+    }
+}
+@media screen {
+    #top {
+        box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+    }
+    #contact {
+        color: white;
+    }
+}
+@media print {
+    #contact {
+        font-size: 8pt;
+    }
+    #contact > div > div > div {
+        margin-right: 8px;
+    }
+}
+
+/* Content */
+@media {
+    #content {
+        position: relative;
+        margin: 0 auto;
+        width: 650px;
+        top: 66px;
+    }
+
+    .section {
+        background-color: #ddd;
+        border: rgba(0,0,0,.4);
+        box-sizing: border-box;
+        padding: 10px 8px;
+        margin-bottom: 50px;
+        position: relative;
+    }
+
+    @media print {
+        .section {
+            margin: 0;
+            padding: 10px 4px;
+        }
+    }
+    /* section heading */
+    .section > :first-child {
+        page-break-after: avoid;
+        margin: 0;
+        font-weight: bold;
+        font-size: 1.5em;
+        color: #d23f31;
+
+        padding: 6px 6px 0;
+        border-radius: 3px;
+    }
+    .card {
+        background-color: white;
+        margin: 10px -20px;
+        color: #212121;
+        box-shadow: rgba(0, 0, 0, 0.156863) 0 0 6px 0, rgba(0, 0, 0, 0.317647) 0 6px 12px 0;
+        clear: both;
+        overflow: auto;
+    }
+    .card > div {
+        padding: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .role-heading {
+        border-bottom: 1px solid #e5e5e5;
+        font-weight: bold;
+        align-content: center;
+        text-align: center;
+        overflow: auto;
+        clear: both;
+    }
+
+    .prose {
+        float: left;
+        width: 70%;
+    }
+
+    .role-description {
+        position: relative;
+        top: -20px;
+    }
+
+    .jargon {
+        text-align: left;
+        float: right;
+        width: 26.5%;
+        line-height: 0;
+        margin-bottom: 10px;
+    }
+
+    .jargon span {
+        background-color: lightblue;
+        line-height: 1.7;
+        margin: 2px;
+        padding: 2px;
+        border-radius: 3px;
+        box-shadow: 2px 1px grey 2px 2px grey;
+    }
+
+    .jargon p {
+        font-weight: bold;
+    }
+}
+/*
+.role {
+    overflow: auto;
+    clear: both;
+    background-color: lightgrey;
+    margin: 4px;
+    padding: 4px;
+    border-radius: 3px;
+    box-shadow: 2px 1px grey 2px 2px grey;
+} */
+@media print {
+    #content {
+        margin: 0;
+    }
+}
+
+/* Fix print small device compact layout issues */
+@media print, screen and (max-width: 720px) {
+    #content {
+        top: 60px
+    }
+
+    #title {
+        font-size: 1.5em
+    }
+
+    #contact {
+        font-size: 80%;
+        min-width: 350px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    #top {
+        display: flex
+    }
+
+    #content {
+        margin: 0
+    }
+}
+
+@media print {
+    #contact {
+        display: block;
+        margin-right: 40px;
+        margin-left: 100px;
+    }
+
+    #top {
+        display: flex;
+        margin-left: 40px;
+        margin-right: 100px;
+    }
+
+    #content {
+        top: 40px;
+    }
+}
+
+/* Generic */
+@media {
+    body {
+        font-size: 82.5%;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        text-align: justify;
+        background: #ececec;
+    }
 }
 
 .bold {
@@ -20,64 +233,6 @@ body {
     float: right;
 }
 
-
-#education, #activities, #skills, #top, .role {
-    overflow: auto;
-    clear: both;
-    background-color: lightgrey;
-    margin: 4px;
-    padding: 4px;
-    border-radius: 3px;
-    box-shadow: 2px 1px grey 2px 2px grey;
-}
-
-.role .prose {
-    float: left;
-    background-color: ivory;
-    width: 70%;
-    padding: 2px;
-    border-radius: 3px;
-    box-shadow: 2px 2px grey 2px 2px grey;
-}
-
-.role .jargon {
-    text-align: left;
-    float: right;
-    background-color: ivory;
-    width: 26.5%;
-    line-height: 0;
-    margin: 2px;
-    padding: 2px;
-    border-radius: 3px;
-    box-shadow: 2px 2px grey 2px 2px grey;
-}
-
-.role .jargon span {
-    background-color: lightblue;
-    line-height: 1.7;
-    margin: 2px;
-    padding: 2px;
-    border-radius: 3px;
-    box-shadow: 2px 1px grey 2px 2px grey;
-}
-
-.role .jargon p {
-    font-weight: bold;
-}
-
-.role-heading {
-    overflow: auto;
-    clear: both;
-    align-content: center;
-    text-align: center;
-    font-weight: bold;
-    padding: 4px;
-    margin: 0 0 4px 0;
-    background-color: ivory;
-    border-radius: 3px;
-    box-shadow: 2px 2px grey 2px 2px grey;
-}
-
 .centre {
     display: inline;
 }
@@ -85,33 +240,11 @@ body {
 .centered {
     text-align: center;
 }
-.sheet-head {
-    background-color: ivory;
-    margin: 4px 4px 8px 4px;
-    padding: 4px;
-    border-radius: 3px;
-    box-shadow: 2px 2px grey 2px 2px grey;
-}
+
 .sheet {
     background-color: ivory;
     margin: 4px;
     padding: 2px;
     border-radius: 3px;
     box-shadow: 2px 2px grey 2px 2px grey;
-}
-
-#contact {
-    line-height: 1.8;
-}
-
-h1 {
-    font-size: 21pt;
-    font-family: "Trebuchet MS",sans-serif;
-    page-break-after: avoid;
-}
-
-h2 {
-    font-size: 16pt;
-    font-family: "Trebuchet MS",sans-serif;
-    page-break-after: avoid;
 }
