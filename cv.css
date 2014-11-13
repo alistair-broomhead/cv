@@ -98,13 +98,6 @@
         border-radius: 2px;
     }
 
-    @media print {
-        .section {
-            background: none;
-            margin: 0;
-            padding: 0;
-        }
-    }
     /* section heading */
     .section > :first-child {
         page-break-after: avoid;
@@ -139,11 +132,6 @@
         float: left;
         width: 70%;
         border-radius: 2px;
-    }
-    @media print {
-        .prose {
-            margin-top: 10px;
-        }
     }
 
     .role-description {
@@ -207,18 +195,6 @@
         padding: 2px;
 
     }
-    @media print {
-        .jargon {
-            margin: 12px 0 0;
-        }
-        .card {
-            page-break-inside: avoid;
-        }
-        .role-heading {
-            margin-bottom: 8px;
-            padding: 0 8px;
-        }
-    }
 
     .jargon p {
         font-weight: bold;
@@ -240,6 +216,30 @@
         display: inline;
     }
     @media print {
+        .section {
+            background: none;
+            margin: 0;
+            padding: 0;
+        }
+        .section > :first-child {
+            margin-top: 8px;
+            margin-right: 0;
+            margin-left: 0;
+            margin-bottom: 8px;
+        }
+        .prose {
+            margin-top: 10px;
+        }
+        .jargon {
+            margin: 12px 0 0;
+        }
+        .card {
+            page-break-inside: avoid;
+        }
+        .role-heading {
+            margin-bottom: 8px;
+            padding: 0 8px;
+        }
         #content {
             margin: 0;
             background: none;
