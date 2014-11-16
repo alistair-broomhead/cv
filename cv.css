@@ -149,6 +149,9 @@
         border-radius: 2px;
     }
     @media screen {
+        .padded {
+            padding: 0 16px;
+        }
         .todo {
             padding: 4px;
             /* noinspection CssOverwrittenProperties */
