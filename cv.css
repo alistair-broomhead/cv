@@ -1,5 +1,8 @@
 /* Heading section */
+/* 
+This would trip up ie (sigh)
 @media {
+    */
     #top {
         box-sizing: border-box;
         top: 0;
@@ -73,10 +76,14 @@
             margin-right: 8px;
         }
     }
-}
+/*}*/
 
 /* Content */
+
+/* 
+This would trip up ie (sigh)
 @media {
+    */
     #content {
         position: relative;
         margin: 0 auto;
@@ -249,7 +256,7 @@
             top: 0;
         }
     }
-}
+/*}*/
 
 /* Fix print small device compact layout issues */
 @media screen and (max-width: 720px) {
@@ -280,7 +287,11 @@
 }
 
 /* Generic */
+
+/* 
+This would trip up ie (sigh)
 @media {
+    */
     body {
         font-size: 82.5%;
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -300,4 +311,4 @@
             margin: 0;
         }
     }
-}
+/*}*/
