@@ -1,303 +1,283 @@
-/* Heading section */
-@media {
-    #top {
-        box-sizing: border-box;
-        top: 0;
-        display: block;
-        line-height: 1;
-        content: "";
-        left: -2%;
-        position: fixed;
-        width: 104%;
-        z-index: 22;
-        background-color: #4285f4;
-    }
-
-    #title {
-        display: inline-block;
-        padding: 0 4px 0 3%;
-        margin: 18px 0;
-        min-width: 180px;
-
-        font-size: 2em;
-        font-weight: bold;
-    }
-
-    #contact {
-        display: inline-block;
-        top: 0;
-        border-radius: 2px;
-        padding: 2px 4px;
-        margin: 10px 3% 10px 0;
-        min-width: 430px;
-        float: right;
-        line-height: 1.5;
-    }
-
-    #contact > div {
-        display: block;
-    }
-
-    #contact > div > div {
-        float: right;
-    }
-    @media screen {
-        #top {
-            box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
-            color: white;
-        }
-        #contact {
-            color: white;
-            background-color: rgba(255, 255, 255, .15);
-        }
-    }
-
-    @media print {
-        #title {
-            padding: 0;
-            margin: 8px;
-        }
-        #top {
-            display: flex;
-            position: static;
-            top: 0;
-            color: white;
-            margin: 0;
-        }
-        #contact {
-            font-size: 8pt;
-            margin: 0 0 0 160px;
-            background-color: #87b2f7;
-        }
-        #contact > div > div > div {
-            margin-right: 8px;
-        }
-    }
+.with-shadow {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
 }
-
-/* Content */
-@media {
-    #content {
-        position: relative;
-        margin: 0 auto;
-        top: 66px;
-    }
-    @media screen {
-        #content {
-            width: 650px;
-        }
-    }
-
-    .section {
-        background-color: #ddd;
-        border: rgba(0,0,0,.4);
-        box-sizing: border-box;
-        padding: 10px 8px;
-        margin-bottom: 50px;
-        position: relative;
-        border-radius: 2px;
-    }
-
-    /* section heading */
-    .section > :first-child {
-        page-break-after: avoid;
-        margin: 0;
-        font-weight: bold;
-        font-size: 1.5em;
-        color: #d23f31;
-
-        padding: 6px 6px 0;
-        border-radius: 2px;
-    }
-    .card {
-        background-color: white;
-        color: #212121;
-        clear: both;
-        overflow: auto;
-        border-radius: 2px;
-    }
-
-    .role-heading {
-        border-bottom: 1px solid #e5e5e5;
-        font-weight: bold;
-        align-content: center;
-        text-align: center;
-        overflow: auto;
-        clear: both;
-        border-radius: 2px;
-    }
-
-    .prose {
-        top: 33px;
-        float: left;
-        width: 70%;
-        border-radius: 2px;
-    }
-
-    .role-description {
-        position: relative;
-        padding: 4px;
-        top: -20px;
-    }
-
-    .jargon {
-        text-align: left;
-        float: right;
-        width: 26%;
-        line-height: 0;
-        margin-bottom: 10px;
-        border-radius: 2px;
-    }
-    @media screen {
-        .padded {
-            padding: 0 16px;
-        }
-        .todo {
-            padding: 4px;
-            /* noinspection CssOverwrittenProperties */
-            box-shadow: inset springgreen 0 0 4px 4px,
-                        springgreen 3px 3px 4px 4px;
-            /* noinspection CssOverwrittenProperties */
-            box-shadow: inset rgba(0, 255, 0, 0.5) 0 0 2px 2px,
-                        rgba(0, 0, 0, 0.15) 0 0 6px 0,
-                        rgba(0, 0, 0, 0.3) 0 6px 12px 0;
-        }
-        .card {
-            margin: 10px -20px;
-            box-shadow: rgba(0, 0, 0, 0.156863) 0 0 6px 0, rgba(0, 0, 0, 0.317647) 0 6px 12px 0;
-        }
-        .prose{
-            margin-top: 16px;
-            padding: 8px;
-            width: 68%;
-            position: static;
-            display: block;
-            box-shadow: rgba(0, 0, 0, 0.156863) 0 0 6px 0, rgba(0, 0, 0, 0.317647) 0 6px 12px 0;
-        }
-        .jargon {
-            margin-top: 16px;
-            margin-bottom: 0;
-            padding: 4px;
-            box-shadow: rgba(0, 0, 0, 0.156863) 0 0 6px 0, rgba(0, 0, 0, 0.317647) 0 6px 12px 0;
-        }
-        .jargon span {
-            box-shadow: rgba(0, 0, 0, 0.156863) 0 0 2px 0, rgba(0, 0, 0, 0.317647) 0 2px 4px 0;
-            margin: 4px;
-            white-space: nowrap;
-            line-height: 2em;
-        }
-        .card > div {
-            padding: 10px 6px 6px;
-        }
-    }
-
-    .jargon span {
-        /*jont-weight: bold;*/
-        line-height: 1.7;
-        margin: 3px;
-        padding: 2px;
-
-    }
-
-    .jargon p {
-        font-weight: bold;
-    }
-    #education span {
-        font-weight: bold;
-        line-height: 0;
-    }
-
-    .left {
-        float: left;
-    }
-
-    .right {
-        float: right;
-    }
-
-    .centre {
-        display: inline;
-    }
-    @media print {
-        .section {
-            background: none;
-            margin: 0;
-            padding: 0;
-        }
-        .section > :first-child {
-            margin-top: 8px;
-            margin-right: 0;
-            margin-left: 0;
-            margin-bottom: 8px;
-        }
-        .prose {
-            margin-top: 10px;
-        }
-        .jargon {
-            margin: 12px 0 0;
-        }
-        .card {
-            page-break-inside: avoid;
-        }
-        .role-heading {
-            margin-bottom: 8px;
-            padding: 0 8px;
-        }
-        #content {
-            margin: 0;
-            background: none;
-            top: 0;
-        }
-    }
+.section {
+  background-color: #dddddd;
+  box-sizing: border-box;
+  padding: 10px 8px;
+  margin-bottom: 50px;
+  position: relative;
+  border-radius: 2px;
 }
-
-/* Fix print small device compact layout issues */
+@media print {
+  .section {
+    background: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+.section > :first-child {
+  page-break-after: avoid;
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #d23f31;
+  padding: 6px 6px 0;
+  border-radius: 2px;
+}
+@media print {
+  .section > :first-child {
+    margin-top: 8px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 8px;
+  }
+}
+#top {
+  box-sizing: border-box;
+  top: 0;
+  line-height: 1;
+  z-index: 22;
+  color: white;
+  background-color: #4285f4;
+}
+@media screen {
+  #top {
+    content: "";
+    left: -2%;
+    width: 104%;
+    display: block;
+    position: fixed;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  }
+}
+@media print {
+  #top {
+    display: flex;
+    position: static;
+    margin: 0;
+  }
+}
+#top #title {
+  display: inline-block;
+  min-width: 180px;
+  font-size: 2em;
+  font-weight: bold;
+}
+@media screen {
+  #top #title {
+    padding: 0 4px 0 3%;
+    margin: 18px 0;
+  }
+}
 @media screen and (max-width: 720px) {
-    #content {
-        top: 60px
-    }
+  #top #title {
+    font-size: 1.5em;
+  }
 }
-@media print, screen and (max-width: 720px) {
-
-    #title {
-        font-size: 1.5em
-    }
-
-    #contact {
-        font-size: 80%;
-        min-width: 350px;
-    }
-}
-
 @media screen and (max-width: 575px) {
-    #top {
-        display: flex
-    }
-
-    #content {
-        margin: 0
-    }
+  #top #title {
+    display: flex;
+  }
 }
+@media print {
+  #top #title {
+    padding: 0;
+    margin: 8px;
+    font-size: 1.5em;
+  }
+}
+#top #contact {
+  display: inline-block;
+  top: 0;
+  border-radius: 2px;
+  padding: 2px 4px;
+  margin: 10px 3% 10px 0;
+  min-width: 430px;
+  float: right;
+  line-height: 1.5;
+}
+#top #contact > div {
+  display: block;
+}
+#top #contact > div > div {
+  float: right;
+}
+@media print {
+  #top #contact > div > div > div {
+    margin-right: 8px;
+  }
+}
+@media screen {
+  #top #contact {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+}
+@media screen and (max-width: 720px) {
+  #top #contact {
+    min-width: 350px;
+    font-size: 80%;
+  }
+}
+@media print {
+  #top #contact {
+    font-size: 8pt;
+    min-width: 350px;
+    margin: 0 0 0 160px;
+    background-color: #87b2f7;
+  }
+}
+#content {
+  position: relative;
+  margin: 0 auto;
+  top: 66px;
+}
+#content .card {
+  background-color: #ffffff;
+  color: #212121;
+  clear: both;
+  overflow: auto;
+  border-radius: 2px;
+}
+@media screen {
+  #content .card {
+    margin: 10px -20px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  }
+}
+@media screen {
+  #content {
+    width: 650px;
+  }
+}
+@media screen and (max-width: 720px) {
+  #content {
+    top: 60px;
+  }
+}
+@media screen and (max-width: 575px) {
+  #content {
+    margin: 0;
+  }
+}
+#content .role-heading {
+  border-bottom: 1px solid #e5e5e5;
+  font-weight: bold;
+  align-content: center;
+  text-align: center;
+  overflow: auto;
+  clear: both;
+  border-radius: 2px;
+}
+#content .prose {
+  top: 33px;
+  float: left;
+  width: 70%;
+  border-radius: 2px;
+}
+#content .role-description {
+  position: relative;
+  padding: 4px;
+  top: -20px;
+}
+#content .jargon {
+  text-align: left;
+  float: right;
+  width: 26%;
+  line-height: 0;
+  margin-bottom: 10px;
+  border-radius: 2px;
+}
+@media screen {
+  #content .padded {
+    padding: 0 16px;
+  }
+  #content .prose {
+    margin-top: 16px;
+    padding: 8px;
+    width: 68%;
+    position: static;
+    display: block;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  }
+  #content .jargon {
+    margin-top: 16px;
+    margin-bottom: 0;
+    padding: 4px;
+    box-shadow: rgba(0, 0, 0, 0.156863) 0 0 6px 0, rgba(0, 0, 0, 0.317647) 0 6px 12px 0;
+  }
+  #content .jargon span {
+    box-shadow: rgba(0, 0, 0, 0.156863) 0 0 2px 0, rgba(0, 0, 0, 0.317647) 0 2px 4px 0;
+    margin: 4px;
+    white-space: nowrap;
+    line-height: 2em;
+  }
+  #content .card > div {
+    padding: 10px 6px 6px;
+  }
+}
+#content .jargon span {
+  /*jont-weight: bold;*/
 
+  line-height: 1.7;
+  margin: 3px;
+  padding: 2px;
+}
+#content .jargon p {
+  font-weight: bold;
+}
+#content #education span {
+  font-weight: bold;
+  line-height: 0;
+}
+#content .left {
+  float: left;
+}
+#content .right {
+  float: right;
+}
+#content .centre {
+  display: inline;
+}
+@media print {
+  #content .prose {
+    margin-top: 10px;
+  }
+  #content .jargon {
+    margin: 12px 0 0;
+  }
+  #content .card {
+    page-break-inside: avoid;
+  }
+  #content .role-heading {
+    margin-bottom: 8px;
+    padding: 0 8px;
+  }
+  #content #content {
+    margin: 0;
+    background: none;
+    top: 0;
+  }
+}
 /* Generic */
-@media {
-    body {
-        font-size: 82.5%;
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        text-align: justify;
-        border-radius: 2px;
-    }
-    @media screen {
-        body {
-            background: #ececec;
-        }
-    }
-    @media print {
-        p {
-            margin: 8px;
-        }
-        body {
-            margin: 0;
-        }
-    }
+body {
+  font-size: 82.5%;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: justify;
+  border-radius: 2px;
+}
+@media screen {
+  body {
+    background: #ececec;
+  }
+}
+@media print {
+  body {
+    margin: 0;
+  }
+}
+@media print {
+  p {
+    margin: 8px;
+  }
 }
