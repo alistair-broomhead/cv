@@ -132,19 +132,6 @@
   margin: 0 auto;
   top: 66px;
 }
-#content .card {
-  background-color: #ffffff;
-  color: #212121;
-  clear: both;
-  overflow: auto;
-  border-radius: 2px;
-}
-@media screen {
-  #content .card {
-    margin: 10px -20px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
-  }
-}
 @media screen {
   #content {
     width: 650px;
@@ -160,6 +147,36 @@
     margin: 0;
   }
 }
+@media print {
+  #content {
+    margin: 0;
+    background: none;
+    top: 0;
+  }
+}
+#content .card {
+  background-color: white;
+  color: #212121;
+  clear: both;
+  overflow: auto;
+  border-radius: 2px;
+}
+@media screen {
+  #content .card {
+    margin: 10px -20px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  }
+}
+@media print {
+  #content .card {
+    page-break-inside: avoid;
+  }
+}
+@media screen {
+  #content .card > div {
+    padding: 10px 6px 6px;
+  }
+}
 #content .role-heading {
   border-bottom: 1px solid #e5e5e5;
   font-weight: bold;
@@ -169,11 +186,32 @@
   clear: both;
   border-radius: 2px;
 }
+@media print {
+  #content .role-heading {
+    margin-bottom: 8px;
+    padding: 0 8px;
+  }
+}
 #content .prose {
   top: 33px;
   float: left;
   width: 70%;
   border-radius: 2px;
+}
+@media screen {
+  #content .prose {
+    margin-top: 16px;
+    padding: 8px;
+    width: 68%;
+    position: static;
+    display: block;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  }
+}
+@media print {
+  #content .prose {
+    margin-top: 10px;
+  }
 }
 #content .role-description {
   position: relative;
@@ -189,39 +227,31 @@
   border-radius: 2px;
 }
 @media screen {
-  #content .padded {
-    padding: 0 16px;
-  }
-  #content .prose {
-    margin-top: 16px;
-    padding: 8px;
-    width: 68%;
-    position: static;
-    display: block;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
-  }
   #content .jargon {
     margin-top: 16px;
     margin-bottom: 0;
     padding: 4px;
     box-shadow: rgba(0, 0, 0, 0.156863) 0 0 6px 0, rgba(0, 0, 0, 0.317647) 0 6px 12px 0;
   }
+}
+@media print {
+  #content .jargon {
+    margin: 12px 0 0;
+  }
+}
+#content .jargon span {
+  /*font-weight: bold;*/
+  line-height: 1.7;
+  margin: 3px;
+  padding: 2px;
+}
+@media screen {
   #content .jargon span {
-    box-shadow: rgba(0, 0, 0, 0.156863) 0 0 2px 0, rgba(0, 0, 0, 0.317647) 0 2px 4px 0;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
     margin: 4px;
     white-space: nowrap;
     line-height: 2em;
   }
-  #content .card > div {
-    padding: 10px 6px 6px;
-  }
-}
-#content .jargon span {
-  /*jont-weight: bold;*/
-
-  line-height: 1.7;
-  margin: 3px;
-  padding: 2px;
 }
 #content .jargon p {
   font-weight: bold;
@@ -239,24 +269,9 @@
 #content .centre {
   display: inline;
 }
-@media print {
-  #content .prose {
-    margin-top: 10px;
-  }
-  #content .jargon {
-    margin: 12px 0 0;
-  }
-  #content .card {
-    page-break-inside: avoid;
-  }
-  #content .role-heading {
-    margin-bottom: 8px;
-    padding: 0 8px;
-  }
-  #content #content {
-    margin: 0;
-    background: none;
-    top: 0;
+@media screen {
+  #content .padded {
+    padding: 0 16px;
   }
 }
 /* Generic */

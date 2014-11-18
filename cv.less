@@ -1,9 +1,6 @@
 @import "theme";
 @import "material";
 
-@first-screen-break: 720px;
-@last-screen-break: 575px;
-
 .section(@background-colour: #ddd; @heading-colour: @secondary-colour);
 
 #top {
@@ -17,8 +14,8 @@
     font-weight: bold;
 
     @media screen {
-        padding: 0 4px 0 3%;
-        margin: 18px 0;
+      padding: 0 4px 0 3%;
+      margin: 18px 0;
     }
 
     @media screen and (max-width: @first-screen-break) {
@@ -83,29 +80,46 @@
   margin: 0 auto;
   top: 66px;
 
-  .card {
-    background-color: @text-background;
-    color: @text-main;
-    clear: both;
-    overflow: auto;
-    border-radius: 2px;
-
-    @media screen {
-      margin: 10px -20px;
-      .with-shadow;
-    }
-  }
-
   @media screen {
     width: 650px;
-  }
 
+  }
   @media screen and (max-width: @first-screen-break) {
     top: 60px
   }
 
   @media screen and (max-width: @last-screen-break) {
     margin: 0;
+  }
+
+  @media print {
+    margin: 0;
+    background: none;
+    top: 0;
+  }
+
+  .card {
+    background-color: @text-background;
+    color: @text-main;
+    clear: both;
+    overflow: auto;
+
+    border-radius: 2px;
+
+    @media screen {
+      margin: 10px -20px;
+      .with-shadow;
+    }
+
+    @media print {
+      page-break-inside: avoid;
+    }
+
+    & > div {
+      @media screen {
+        padding: 10px 6px 6px;
+      }
+    }
   }
 
   .role-heading {
@@ -116,12 +130,30 @@
     overflow: auto;
     clear: both;
     border-radius: 2px;
+    
+    @media print {
+      margin-bottom: 8px;
+      padding: 0 8px;
+    }
   }
   .prose {
     top: 33px;
     float: left;
     width: 70%;
     border-radius: 2px;
+
+    @media screen {
+      margin-top: 16px;
+      padding: 8px;
+      width: 68%;
+      position: static;
+      display: block;
+      .with-shadow;
+    }
+    
+    @media print {
+      margin-top: 10px;
+    }
   }
   .role-description {
     position: relative;
@@ -135,48 +167,35 @@
     line-height: 0;
     margin-bottom: 10px;
     border-radius: 2px;
-  }
-  @media screen {
-    .padded {
-      padding: 0 16px;
-    }
 
-    .prose {
-      margin-top: 16px;
-      padding: 8px;
-      width: 68%;
-      position: static;
-      display: block;
-      .with-shadow;
-    }
-
-    .jargon {
+    @media screen {
       margin-top: 16px;
       margin-bottom: 0;
       padding: 4px;
       box-shadow: rgba(0, 0, 0, 0.156863) 0 0 6px 0, rgba(0, 0, 0, 0.317647) 0 6px 12px 0;
     }
 
-    .jargon span {
-      box-shadow: rgba(0, 0, 0, 0.156863) 0 0 2px 0, rgba(0, 0, 0, 0.317647) 0 2px 4px 0;
-      margin: 4px;
-      white-space: nowrap;
-      line-height: 2em;
+    @media print {
+      margin: 12px 0 0;
     }
 
-    .card > div {
-      padding: 10px 6px 6px;
-    }
-  }
-  .jargon span {
-    /*jont-weight: bold;*/
-    line-height: 1.7;
-    margin: 3px;
-    padding: 2px;
 
-  }
-  .jargon p {
-    font-weight: bold;
+    & span {
+      /*font-weight: bold;*/
+      line-height: 1.7;
+      margin: 3px;
+      padding: 2px;
+      
+      @media screen {
+        .with-shadow;
+        margin: 4px;
+        white-space: nowrap;
+        line-height: 2em;
+      }
+    }
+    & p {
+      font-weight: bold;
+    }
   }
   #education span {
     font-weight: bold;
@@ -191,29 +210,9 @@
   .centre {
     display: inline;
   }
-  @media print {
-
-    .prose {
-      margin-top: 10px;
-    }
-
-    .jargon {
-      margin: 12px 0 0;
-    }
-
-    .card {
-      page-break-inside: avoid;
-    }
-
-    .role-heading {
-      margin-bottom: 8px;
-      padding: 0 8px;
-    }
-
-    #content {
-      margin: 0;
-      background: none;
-      top: 0;
+  .padded {
+    @media screen {
+      padding: 0 16px;
     }
   }
 }
@@ -232,8 +231,8 @@ body {
   }
 }
 
-@media print {
-  p {
+p {
+  @media print {
     margin: 8px;
   }
 }
