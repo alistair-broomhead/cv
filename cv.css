@@ -1,6 +1,11 @@
 .with-shadow {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
 }
+@media screen {
+  .card {
+    margin: 10px -20px;
+  }
+}
 .section {
   background-color: #dddddd;
   box-sizing: border-box;
@@ -31,6 +36,11 @@
     margin-right: 0;
     margin-left: 0;
     margin-bottom: 8px;
+  }
+}
+@media screen {
+  .section > .card {
+    margin: 10px -30px;
   }
 }
 #top {
@@ -154,6 +164,100 @@
     top: 0;
   }
 }
+#content #experience .role-heading {
+  border-bottom: 1px solid #e5e5e5;
+  font-weight: bold;
+  align-content: center;
+  text-align: center;
+  overflow: auto;
+  clear: both;
+  border-radius: 2px;
+}
+@media print {
+  #content #experience .role-heading {
+    margin-bottom: 8px;
+    padding: 0 8px;
+  }
+}
+#content #experience .role-heading .left {
+  float: left;
+}
+#content #experience .role-heading .right {
+  float: right;
+}
+#content #experience .role-heading .centre {
+  display: inline;
+}
+#content #experience .role-description {
+  position: relative;
+  padding: 4px;
+  top: -20px;
+}
+#content #experience .role-description .prose {
+  top: 33px;
+  float: left;
+  width: 70%;
+  border-radius: 2px;
+}
+@media screen {
+  #content #experience .role-description .prose {
+    margin: 4px;
+    margin-top: 24px;
+    padding: 0 8px;
+    width: 68%;
+    position: static;
+    display: block;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  }
+}
+@media print {
+  #content #experience .role-description .prose {
+    margin-top: 10px;
+  }
+}
+#content #experience .role-description .jargon {
+  text-align: left;
+  float: right;
+  width: 26%;
+  line-height: 0;
+  margin-bottom: 10px;
+  border-radius: 2px;
+}
+@media screen {
+  #content #experience .role-description .jargon {
+    margin: 4px;
+    margin-top: 24px;
+    margin-bottom: 0;
+    padding: 4px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  }
+}
+@media print {
+  #content #experience .role-description .jargon {
+    margin: 12px 0 0;
+  }
+}
+#content #experience .role-description .jargon span {
+  /*font-weight: bold;*/
+  line-height: 1.7;
+  margin: 3px;
+  padding: 2px;
+}
+@media screen {
+  #content #experience .role-description .jargon span {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+    margin: 4px;
+    white-space: nowrap;
+    line-height: 2em;
+  }
+}
+#content #experience .role-description .jargon p {
+  font-weight: bold;
+}
+#content #education span {
+  font-weight: bold;
+  line-height: 0;
+}
 #content .card {
   background-color: white;
   color: #212121;
@@ -163,7 +267,6 @@
 }
 @media screen {
   #content .card {
-    margin: 10px -20px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
   }
 }
@@ -176,98 +279,6 @@
   #content .card > div {
     padding: 10px 6px 6px;
   }
-}
-#content .role-heading {
-  border-bottom: 1px solid #e5e5e5;
-  font-weight: bold;
-  align-content: center;
-  text-align: center;
-  overflow: auto;
-  clear: both;
-  border-radius: 2px;
-}
-@media print {
-  #content .role-heading {
-    margin-bottom: 8px;
-    padding: 0 8px;
-  }
-}
-#content .prose {
-  top: 33px;
-  float: left;
-  width: 70%;
-  border-radius: 2px;
-}
-@media screen {
-  #content .prose {
-    margin-top: 16px;
-    padding: 8px;
-    width: 68%;
-    position: static;
-    display: block;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
-  }
-}
-@media print {
-  #content .prose {
-    margin-top: 10px;
-  }
-}
-#content .role-description {
-  position: relative;
-  padding: 4px;
-  top: -20px;
-}
-#content .jargon {
-  text-align: left;
-  float: right;
-  width: 26%;
-  line-height: 0;
-  margin-bottom: 10px;
-  border-radius: 2px;
-}
-@media screen {
-  #content .jargon {
-    margin-top: 16px;
-    margin-bottom: 0;
-    padding: 4px;
-    box-shadow: rgba(0, 0, 0, 0.156863) 0 0 6px 0, rgba(0, 0, 0, 0.317647) 0 6px 12px 0;
-  }
-}
-@media print {
-  #content .jargon {
-    margin: 12px 0 0;
-  }
-}
-#content .jargon span {
-  /*font-weight: bold;*/
-  line-height: 1.7;
-  margin: 3px;
-  padding: 2px;
-}
-@media screen {
-  #content .jargon span {
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
-    margin: 4px;
-    white-space: nowrap;
-    line-height: 2em;
-  }
-}
-#content .jargon p {
-  font-weight: bold;
-}
-#content #education span {
-  font-weight: bold;
-  line-height: 0;
-}
-#content .left {
-  float: left;
-}
-#content .right {
-  float: right;
-}
-#content .centre {
-  display: inline;
 }
 @media screen {
   #content .padded {

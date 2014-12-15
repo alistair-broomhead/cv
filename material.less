@@ -2,6 +2,31 @@
   box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
 }
 
+.card(@background-colour;
+      @text-colour){
+    background-color: @background-colour;
+    color: @text-colour;
+    clear: both;
+    overflow: auto;
+
+    border-radius: 2px;
+
+    @media screen {
+      .with-shadow;
+    }
+
+    @media print {
+      page-break-inside: avoid;
+    }
+
+}
+
+.card {
+  @media screen {
+    margin: 10px -20px;
+  }
+}
+
 .section(@background-colour;
          @heading-colour){
     .section {
@@ -34,6 +59,12 @@
                 margin-bottom: 8px;
             }
         }
+
+      & > .card {
+        @media screen {
+          margin: 10px -30px;
+        }
+      }
     }
 }
 
