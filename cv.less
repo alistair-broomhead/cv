@@ -9,7 +9,7 @@
 
   #title {
     display: inline-block;
-    min-width: 180px;
+    min-width: 190px;
 
     font-size: 2em;
     font-weight: bold;
@@ -83,6 +83,8 @@
 
   @media screen {
     width: 650px;
+    line-height: 1.3;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   }
   @media screen and (max-width: @first-screen-break) {
@@ -97,6 +99,7 @@
     margin: 0;
     background: none;
     top: 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
   }
 
   #experience{
@@ -132,7 +135,6 @@
       .prose {
         top: 33px;
         float: left;
-        width: 70%;
         border-radius: 2px;
 
         @media screen {
@@ -147,17 +149,21 @@
 
         @media print {
           margin-top: 10px;
+          width: 77%;
         }
       }
       .jargon {
         text-align: left;
         float: right;
-        width: 26%;
-        line-height: 0;
         margin-bottom: 10px;
         border-radius: 2px;
 
+        h4 {
+          line-height: 0;
+        }
+
         @media screen {
+          width: 26%;
           margin: 4px;
           margin-top: 24px;
           margin-bottom: 0;
@@ -166,22 +172,41 @@
         }
 
         @media print {
+          width: 23%;
           margin: 12px 0 0;
         }
-
-
+        & b {
+          visibility: hidden;
+          height: 0;
+          width: 0;
+        }
         & span {
-          /*font-weight: bold;*/
-          line-height: 1.7;
-          margin: 3px;
-          padding: 2px;
+          margin: 0 0 0 12px;
+          white-space: nowrap;
 
           @media screen {
+          padding: 2px;
             .with-shadow;
             margin: 4px;
-            white-space: nowrap;
             line-height: 2em;
+
+            i {
+              display: none;
+              visibility: hidden;
+              height: 0;
+              width: 0;
+            }
           }
+          @media print {
+            min-width: 30%;
+            max-width: 90%;
+          }
+        }
+        & > :last-of-type i {
+              display: none;
+              visibility: hidden;
+              height: 0;
+              width: 0;
         }
         & p {
           font-weight: bold;

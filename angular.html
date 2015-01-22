@@ -41,8 +41,26 @@
     </div>
 </div>
 <div id="content">
-<div class="card padded">
+
+    <div class="card padded">
+        <div>
+            <p ng-repeat="qual in qualifications">
+                <b>{{qual.title}}</b> - {{qual.description}}
+            </p>
+        </div>
+    </div>
+<!--<div class="card padded">
     <p ng-repeat="para in opening_statement"> {{para}} </p>
+</div>-->
+<div id="activities" class="section">
+    <div>Career outlook</div>
+
+    <div class="card">
+        <div>
+            <span ng-repeat="para in personal_statement"
+                  ng-bind-html-unsafe="para"></span>
+        </div>
+    </div>
 </div>
 <div id="experience" class="section">
     <div>
@@ -57,27 +75,17 @@
         </div>
         <div class="role-description">
             <div class="prose">
-                <p ng-repeat="p in role.description">{{p}}</p>
+                <div ng-repeat="para in role.description track by $index"
+                     ng-bind-html-unsafe="para"></div>
             </div>
             <div class="jargon">
-                <p>Skills:</p>
-                <span ng-repeat-start="skill in role.skills">{{skill}} </span> <b ng-repeat-end></b>
+                <h4>Skills:</h4>
+                <span ng-repeat-start="skill in role.skills">{{skill}}<i>, </i></span><b ng-repeat-end> </b>
             </div>
             <div class="jargon">
-                <p>Technologies:</p>
-                <span ng-repeat-start="tech in role.technologies">{{tech}} </span> <b ng-repeat-end></b>
+                <h4>Technologies:</h4>
+                <span ng-repeat-start="tech in role.technologies">{{tech}}<i>, </i></span><b ng-repeat-end> </b>
             </div>
-        </div>
-    </div>
-</div>
-<div id="activities" class="section">
-    <div>Career outlook</div>
-
-    <div class="card">
-        <div>
-            <p ng-repeat="para in activities">
-                <span ng-bind-html-unsafe="para"></span>
-            </p>
         </div>
     </div>
 </div>
@@ -88,8 +96,8 @@
 
     <div class="card">
         <div>
-            <p ng-repeat="qual in qualifications">
-                <span>{{qual.title}}</span> - {{qual.description}}
+            <p ng-repeat="act in professional_activities">
+                <span>{{act.title}}</span> - {{act.description}}
             </p>
         </div>
     </div>

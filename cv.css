@@ -10,15 +10,19 @@
   background-color: #dddddd;
   box-sizing: border-box;
   padding: 10px 8px;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   position: relative;
   border-radius: 2px;
 }
 @media print {
   .section {
+    line-height: 1.2;
     background: none;
     margin: 0;
     padding: 0;
+  }
+  .section .card {
+    line-height: 1.4;
   }
 }
 .section > :first-child {
@@ -32,10 +36,10 @@
 }
 @media print {
   .section > :first-child {
-    margin-top: 8px;
+    margin-top: 4px;
     margin-right: 0;
     margin-left: 0;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
   }
 }
 @media screen {
@@ -70,7 +74,7 @@
 }
 #top #title {
   display: inline-block;
-  min-width: 180px;
+  min-width: 190px;
   font-size: 2em;
   font-weight: bold;
 }
@@ -145,6 +149,8 @@
 @media screen {
   #content {
     width: 650px;
+    line-height: 1.3;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 }
 @media screen and (max-width: 720px) {
@@ -162,6 +168,7 @@
     margin: 0;
     background: none;
     top: 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
   }
 }
 #content #experience .role-heading {
@@ -196,7 +203,6 @@
 #content #experience .role-description .prose {
   top: 33px;
   float: left;
-  width: 70%;
   border-radius: 2px;
 }
 @media screen {
@@ -213,18 +219,21 @@
 @media print {
   #content #experience .role-description .prose {
     margin-top: 10px;
+    width: 77%;
   }
 }
 #content #experience .role-description .jargon {
   text-align: left;
   float: right;
-  width: 26%;
-  line-height: 0;
   margin-bottom: 10px;
   border-radius: 2px;
 }
+#content #experience .role-description .jargon h4 {
+  line-height: 0;
+}
 @media screen {
   #content #experience .role-description .jargon {
+    width: 26%;
     margin: 4px;
     margin-top: 24px;
     margin-bottom: 0;
@@ -234,22 +243,44 @@
 }
 @media print {
   #content #experience .role-description .jargon {
+    width: 23%;
     margin: 12px 0 0;
   }
 }
+#content #experience .role-description .jargon b {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
 #content #experience .role-description .jargon span {
-  /*font-weight: bold;*/
-  line-height: 1.7;
-  margin: 3px;
-  padding: 2px;
+  margin: 0 0 0 12px;
+  white-space: nowrap;
 }
 @media screen {
   #content #experience .role-description .jargon span {
+    padding: 2px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
     margin: 4px;
-    white-space: nowrap;
     line-height: 2em;
   }
+  #content #experience .role-description .jargon span i {
+    display: none;
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+}
+@media print {
+  #content #experience .role-description .jargon span {
+    min-width: 30%;
+    max-width: 90%;
+  }
+}
+#content #experience .role-description .jargon > :last-of-type i {
+  display: none;
+  visibility: hidden;
+  height: 0;
+  width: 0;
 }
 #content #experience .role-description .jargon p {
   font-weight: bold;
@@ -268,11 +299,6 @@
 @media screen {
   #content .card {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
-  }
-}
-@media print {
-  #content .card {
-    page-break-inside: avoid;
   }
 }
 @media screen {
