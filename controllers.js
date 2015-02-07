@@ -150,7 +150,7 @@ function roles(){
         {
             situation:  "As a new company JustYoyo had not yet introduced QA. ",
             task:       "I needed to insert quality into the development and release processes in order to increase both internal and external confidence in the product. ",
-            action:     "To achieve this I introduced an issue tracking system, used this to introduce quality gates before and after development personal_statement, then automated a proportion of the test suite against the product's REST server. ",
+            action:     "To achieve this I introduced an issue tracking system, used this to introduce quality gates before and after development activities, then automated a proportion of the test suite against the product's REST server. ",
             results:    "The improved specifications received by the developers meant that the right work was carried out with fewer corrections while the new test process caught a number of issues that otherwise may have been released. ",
             method:     "star"
 
