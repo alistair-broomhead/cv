@@ -1,175 +1,139 @@
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  text-align: left;
+  font-size: 17px;
+  border-radius: 2px;
+  background: #ececec;
+}
 .with-shadow {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
 }
-@media screen {
-  .card {
-    margin: 10px -20px;
-  }
-}
-.section {
-  background-color: #dddddd;
-  box-sizing: border-box;
-  padding: 10px 8px;
-  margin-bottom: 60px;
-  position: relative;
-  border-radius: 2px;
-}
-@media print {
-  .section {
-    line-height: 1.2;
-    background: none;
-    margin: 0;
-    padding: 0;
-  }
-  .section .card {
-    line-height: 1.4;
-  }
-}
-.section > :first-child {
-  page-break-after: avoid;
-  margin: 0;
-  font-weight: bold;
-  font-size: 1.5em;
-  color: #d23f31;
-  padding: 6px 6px 0;
-  border-radius: 2px;
-}
-@media print {
-  .section > :first-child {
-    margin-top: 4px;
-    margin-right: 0;
-    margin-left: 0;
-    margin-bottom: 4px;
-  }
-}
-@media screen {
-  .section > .card {
-    margin: 10px -30px;
-  }
+.fallback-shadow {
+  box-shadow: 0 0 1px #2b2b2b, 0 1px 2px #151515;
 }
 #top {
-  box-sizing: border-box;
-  top: 0;
-  line-height: 1;
-  z-index: 22;
   color: white;
   background-color: #4285f4;
 }
-@media screen {
-  #top {
-    content: "";
-    left: -2%;
-    width: 104%;
-    display: block;
-    position: fixed;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
-  }
-}
-@media print {
-  #top {
-    display: flex;
-    position: static;
-    margin: 0;
-  }
-}
 #top #title {
-  display: inline-block;
-  min-width: 190px;
   font-size: 2em;
   font-weight: bold;
 }
-@media screen {
-  #top #title {
-    padding: 0 4px 0 3%;
-    margin: 18px 0;
-  }
-}
-@media screen and (max-width: 720px) {
-  #top #title {
-    font-size: 1.5em;
-  }
-}
-@media screen and (max-width: 575px) {
-  #top #title {
-    display: flex;
-  }
-}
-@media print {
-  #top #title {
-    padding: 0;
-    margin: 8px;
-    font-size: 1.5em;
-  }
-}
 #top #contact {
-  display: inline-block;
+  line-height: 1.5;
   top: 0;
   border-radius: 2px;
   padding: 2px 4px;
   margin: 10px 3% 10px 0;
-  min-width: 430px;
+  min-width: 550px;
+  max-width: 800px;
+  width: 50%;
   float: right;
-  line-height: 1.5;
-}
-#top #contact > div {
   display: block;
-}
-#top #contact > div > div {
-  float: right;
-}
-@media print {
-  #top #contact > div > div > div {
-    margin-right: 8px;
-  }
+  color: #212121;
 }
 @media screen {
-  #top #contact {
-    background-color: rgba(255, 255, 255, 0.15);
+  #top {
+    box-sizing: border-box;
+    top: 0;
+    z-index: 2;
+    width: 104%;
+    min-width: 1000px;
+    position: fixed;
+    left: -2%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
   }
-}
-@media screen and (max-width: 720px) {
   #top #contact {
-    min-width: 350px;
-    font-size: 80%;
+    background-color: white;
+  }
+  #top #contact > div {
+    display: block;
+  }
+  #top #contact > div a:link,
+  #top #contact > div a:visited {
+    float: left;
+    color: #212121;
+  }
+  #top #contact > div > div {
+    float: right;
+  }
+  #top #title {
+    display: inline-block;
+    min-width: 190px;
+    padding: 0 4px 0 3%;
+    margin: 18px 0;
   }
 }
 @media print {
-  #top #contact {
-    font-size: 8pt;
-    min-width: 350px;
-    margin: 0 0 0 160px;
-    background-color: #87b2f7;
+  #top .fallback-shadow #contact {
+    width: 100%;
   }
+}
+card {
+  float: none;
+  display: block;
+  background-color: white;
+  color: #212121;
+  clear: both;
+  overflow: auto;
+  border-radius: 2px;
+  margin: 15px 0 15px;
+  line-height: 1.9;
+}
+@media screen {
+  card {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+    padding: 0 10px;
+  }
+  card > div {
+    padding: 10px 6px 6px;
+  }
+}
+@media print {
+  card {
+    line-height: 1.2;
+    box-shadow: 0 0 1px #2b2b2b, 0 1px 2px #151515;
+    padding: 0 10px;
+  }
+}
+.justified {
+  text-align: justify;
+}
+section {
+  z-index: 0;
+  box-sizing: border-box;
+  padding: 4px 0 1px;
+  position: relative;
+  border-radius: 2px;
+  margin-bottom: 25px;
+}
+section > * {
+  z-index: 1;
+}
+section h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 8px 4px 4px;
+  color: #990000;
+}
+section sheet {
+  position: absolute;
+  top: 0;
+  display: block;
+  z-index: -1;
+  margin: 15px 2% 25px;
+  width: 96%;
+  height: 100%;
+  background-color: #cccccc;
 }
 #content {
-  position: relative;
-  margin: 0 auto;
+  display: block;
+  margin: 20px;
+  position: absolute;
   top: 66px;
-}
-@media screen {
-  #content {
-    width: 650px;
-    line-height: 1.3;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  }
-}
-@media screen and (max-width: 720px) {
-  #content {
-    top: 60px;
-  }
-}
-@media screen and (max-width: 575px) {
-  #content {
-    margin: 0;
-  }
-}
-@media print {
-  #content {
-    margin: 0;
-    background: none;
-    top: 0;
-    font-family: Georgia, "Times New Roman", Times, serif;
-  }
+  padding-top: 6px;
+  line-height: 2;
 }
 #content #experience .role-heading {
   border-bottom: 1px solid #e5e5e5;
@@ -179,12 +143,6 @@
   overflow: auto;
   clear: both;
   border-radius: 2px;
-}
-@media print {
-  #content #experience .role-heading {
-    margin-bottom: 8px;
-    padding: 0 8px;
-  }
 }
 #content #experience .role-heading .left {
   float: left;
@@ -196,140 +154,35 @@
   display: inline;
 }
 #content #experience .role-description {
-  position: relative;
-  padding: 4px;
-  top: -20px;
+  border-spacing: 8px;
 }
 #content #experience .role-description .prose {
-  top: 33px;
+  text-align: justify;
   float: left;
-  border-radius: 2px;
-}
-@media screen {
-  #content #experience .role-description .prose {
-    margin: 4px;
-    margin-top: 24px;
-    padding: 0 8px;
-    width: 68%;
-    position: static;
-    display: block;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
-  }
-}
-@media print {
-  #content #experience .role-description .prose {
-    margin-top: 10px;
-    width: 77%;
-  }
+  width: 73%;
+  margin: 8px 0;
 }
 #content #experience .role-description .jargon {
-  text-align: left;
   float: right;
-  margin-bottom: 10px;
-  border-radius: 2px;
+  width: 23%;
 }
 #content #experience .role-description .jargon h4 {
   line-height: 0;
-}
-@media screen {
-  #content #experience .role-description .jargon {
-    width: 26%;
-    margin: 4px;
-    margin-top: 24px;
-    margin-bottom: 0;
-    padding: 4px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
-  }
-}
-@media print {
-  #content #experience .role-description .jargon {
-    width: 23%;
-    margin: 12px 0 0;
-  }
 }
 #content #experience .role-description .jargon b {
   visibility: hidden;
   height: 0;
   width: 0;
 }
-#content #experience .role-description .jargon span {
-  margin: 0 0 0 12px;
+#content #experience .role-description .jargon keyword {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
   white-space: nowrap;
+  padding: 2px;
+  line-height: 2em;
 }
-@media screen {
-  #content #experience .role-description .jargon span {
-    padding: 2px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
-    margin: 4px;
-    line-height: 2em;
-  }
-  #content #experience .role-description .jargon span i {
-    display: none;
-    visibility: hidden;
-    height: 0;
-    width: 0;
-  }
-}
-@media print {
-  #content #experience .role-description .jargon span {
-    min-width: 30%;
-    max-width: 90%;
-  }
-}
-#content #experience .role-description .jargon > :last-of-type i {
-  display: none;
-  visibility: hidden;
-  height: 0;
-  width: 0;
+#content #experience .role-description .jargon keyword ::after {
+  margin-right: auto;
 }
 #content #experience .role-description .jargon p {
   font-weight: bold;
-}
-#content #education span {
-  font-weight: bold;
-  line-height: 0;
-}
-#content .card {
-  background-color: white;
-  color: #212121;
-  clear: both;
-  overflow: auto;
-  border-radius: 2px;
-}
-@media screen {
-  #content .card {
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
-  }
-}
-@media screen {
-  #content .card > div {
-    padding: 10px 6px 6px;
-  }
-}
-@media screen {
-  #content .padded {
-    padding: 0 16px;
-  }
-}
-/* Generic */
-body {
-  font-size: 82.5%;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  text-align: justify;
-  border-radius: 2px;
-}
-@media screen {
-  body {
-    background: #ececec;
-  }
-}
-@media print {
-  body {
-    margin: 0;
-  }
-}
-@media print {
-  p {
-    margin: 8px;
-  }
 }

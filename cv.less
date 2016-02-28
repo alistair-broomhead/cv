@@ -1,108 +1,200 @@
-@import "theme";
-@import "material";
+@primary-colour: #4285f4;
+@heading-colour: #990000;
 
-.section(@background-colour: @section-background;
-         @heading-colour: @secondary-colour);
+
+@text-background: white;
+@text-main: #212121;
+
+@contact-background: white;
+@contact-text: @text-main;
+
+@card-divider: 1px solid #e5e5e5;
+@page-background: #ececec;
+@section-background: #cccccc;
+
+@sheet-indent: 5%;
+@between-sheets: 25px;
+@between-cards: 15px;
+
+@first-screen-break: 720px;
+@last-screen-break: 575px;
+
+body {
+  font-family: Verdana, Geneva, sans-serif;
+
+  text-align: left;
+  font-size: 17px;
+
+  border-radius: 2px;
+  background: @page-background;
+}
+
+.with-shadow {
+  box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+}
+
+.fallback-shadow {
+  box-shadow: 0 0 1px #2b2b2b, 0 1px 2px #151515;
+}
 
 #top {
-  .top-bar(@primary-colour);
+  color: white;
+  background-color: @primary-colour;
 
   #title {
-    display: inline-block;
-    min-width: 190px;
-
     font-size: 2em;
     font-weight: bold;
-
-    @media screen {
-      padding: 0 4px 0 3%;
-      margin: 18px 0;
-    }
-
-    @media screen and (max-width: @first-screen-break) {
-        font-size: 1.5em;
-    }
-
-    @media screen and (max-width: @last-screen-break) {
-        display: flex
-    }
-
-    @media print {
-        padding: 0;
-        margin: 8px;
-        font-size: 1.5em;
-    }
   }
 
   #contact {
-    display: inline-block;
+    line-height: 1.5;
     top: 0;
     border-radius: 2px;
     padding: 2px 4px;
     margin: 10px 3% 10px 0;
-    min-width: 430px;
+    min-width: 550px;
+    max-width: 800px;
+    width: 50%;
     float: right;
-    line-height: 1.5;
 
-    & > div {
-      display: block;
+    display: block;
+    color: @contact-text;
+
+  }
+
+
+  @media screen {
+    box-sizing: border-box;
+    top: 0;
+    z-index: 2;
+    width: 104%;
+    min-width: 1000px;
+
+    position: fixed;
+
+    left: -2%;
+
+    #contact {
+      background-color: @contact-background;
 
       & > div {
-        float: right;
+        display: block;
 
-        @media print {
-            & > div {
-                margin-right: 8px;
-            }
+        a:link, a:visited {
+          float: left;
+          color: @contact-text;
+        }
+
+        & > div {
+          float: right;
         }
       }
     }
 
-    @media screen {
-        background-color: @lightened;
-    }
-    @media screen and (max-width: @first-screen-break) {
-        min-width: 350px;
-        font-size: 80%;
+    #title {
+      display: inline-block;
+      min-width: 190px;
+
+
+      padding: 0 4px 0 3%;
+      margin: 18px 0;
     }
 
-    @media print {
-        font-size: 8pt;
-        min-width: 350px;
-        margin: 0 0 0 160px;
-        background-color: @primary-colour-light;
+    .with-shadow;
+  }
 
+  @media print {
+    .fallback-shadow
+
+    #contact {
+      width: 100%;
     }
   }
 }
 
-#content {
-  position: relative;
-  margin: 0 auto;
-  top: 66px;
+card {
+  float: none;
+  display: block;
+
+
+  background-color: @text-background;
+  color: @text-main;
+  clear: both;
+  overflow: auto;
+
+  border-radius: 2px;
+  margin: 15px 0 @between-cards;
+    line-height: 1.9;
 
   @media screen {
-    width: 650px;
-    line-height: 1.3;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+    .with-shadow;
+    padding: 0 10px;
+    & > div {
+      padding: 10px 6px 6px;
+    }
   }
-  @media screen and (max-width: @first-screen-break) {
-    top: 60px
-  }
-
-  @media screen and (max-width: @last-screen-break) {
-    margin: 0;
-  }
-
   @media print {
-    margin: 0;
-    background: none;
-    top: 0;
-    font-family: Georgia, "Times New Roman", Times, serif;
+    line-height: 1.2;
+    .fallback-shadow;
+    padding: 0 10px;
   }
+
+}
+
+.justified {
+  text-align: justify;
+}
+
+
+
+section {
+
+  z-index: 0;
+  & > * {
+    z-index: 1;
+  }
+
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 8px 4px 4px;
+    color: @heading-colour;
+  }
+
+  sheet {
+    position: absolute;
+    top: 0;
+    display: block;
+    z-index: -1;
+    margin: 15px 2% @between-sheets;
+    width: 96%;
+    height: 100%;
+    background-color: @section-background;
+  }
+
+  box-sizing: border-box;
+  padding: 4px 0 1px;
+  position: relative;
+  border-radius: 2px;
+  margin-bottom: @between-sheets;
+}
+
+
+#content {
+  display: block;
+
+  margin: 20px;
+  position: absolute;
+  top: 66px;
+
+
+  padding-top: 6px;
+  line-height: 2;
+
 
   #experience{
+
     .role-heading {
       border-bottom: @card-divider;
       font-weight: bold;
@@ -111,11 +203,6 @@
       overflow: auto;
       clear: both;
       border-radius: 2px;
-
-      @media print {
-        margin-bottom: 8px;
-        padding: 0 8px;
-      }
 
       .left {
         float: left;
@@ -128,131 +215,44 @@
       }
     }
     .role-description {
-      position: relative;
-      padding: 4px;
-      top: -20px;
+      border-spacing: 8px;
+
 
       .prose {
-        top: 33px;
+        .justified;
         float: left;
-        border-radius: 2px;
-
-        @media screen {
-          margin: 4px;
-          margin-top: 24px;
-          padding: 0 8px;
-          width: 68%;
-          position: static;
-          display: block;
-          .with-shadow;
-        }
-
-        @media print {
-          margin-top: 10px;
-          width: 77%;
-        }
+        width: 73%;
+        margin: 8px 0;
       }
       .jargon {
-        text-align: left;
         float: right;
-        margin-bottom: 10px;
-        border-radius: 2px;
+        width: 23%;
 
         h4 {
           line-height: 0;
-        }
-
-        @media screen {
-          width: 26%;
-          margin: 4px;
-          margin-top: 24px;
-          margin-bottom: 0;
-          padding: 4px;
-          .with-shadow;
-        }
-
-        @media print {
-          width: 23%;
-          margin: 12px 0 0;
         }
         & b {
           visibility: hidden;
           height: 0;
           width: 0;
         }
-        & span {
-          margin: 0 0 0 12px;
+        keyword {
+
+          .with-shadow;
           white-space: nowrap;
-
-          @media screen {
           padding: 2px;
-            .with-shadow;
-            margin: 4px;
-            line-height: 2em;
+          line-height: 2em;
 
-            i {
-              display: none;
-              visibility: hidden;
-              height: 0;
-              width: 0;
-            }
+          ::after {
+            margin-right: auto;
           }
-          @media print {
-            min-width: 30%;
-            max-width: 90%;
-          }
-        }
-        & > :last-of-type i {
-              display: none;
-              visibility: hidden;
-              height: 0;
-              width: 0;
+
+
         }
         & p {
           font-weight: bold;
         }
       }
     }
-  }
-
-  #education span {
-    font-weight: bold;
-    line-height: 0;
-  }
-
-  .card {
-    .card(@background-colour: @text-background;
-          @text-colour: @text-main);
-
-    & > div {
-      @media screen {
-        padding: 10px 6px 6px;
-      }
-    }
-  }
-  .padded {
-    @media screen {
-      padding: 0 16px;
-    }
-  }
-}
-
-/* Generic */
-body {
-  font-size: 82.5%;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  text-align: justify;
-  border-radius: 2px;
-  @media screen {
-    background: @page-background;
-  }
-  @media print {
-    margin: 0;
-  }
-}
-
-p {
-  @media print {
-    margin: 8px;
   }
 }

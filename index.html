@@ -1,17 +1,328 @@
 <!--suppress HtmlUnknownTag -->
+<!-- cloudconvert 0.5 zoom -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>
-        Alistair Broomhead CV
-    </title>
+    <title> Alistair Broomhead CV </title>
     <link rel="stylesheet" type="text/css" href="cv.css">
-    <style>
-        .games {
-            display: none;
-        }
-    </style>
 </head>
-<body ng-controller="cvController as ctrl" class="ng-scope">
+<body>
+<div id="content">
+    <section id="personal-statement">
+        <sheet></sheet>
+        <h1>Career outlook</h1>
+        <card>
+            <div class="justified">
+                <p>
+                    In my professional life I am enthusiastic about making high quality software.
+
+                    My proven track-record and history in QA has led to me being called upon as the person who will quickly pick up a new technology or solve complex problems.
+
+                    This frequently sees me moved into projects looking for either my depth of python knowledge or my breadth of experience.
+
+                    I am looking for a workplace where I am a senior member of a creative, innovative team in which I can work with my colleagues to craft products of the highest quality.
+                </p>
+                <p>
+                    I have a lifelong passion for building software which has translated into an active membership of various communities.
+
+                    As part of the <a href="http://ldnpydojo.org.uk/">London Python Dojo</a> team I help less experienced python developers, practice leadership, encourage best practices such as TDD, and build relationships within the python community.
+
+                    Wishing to extend this to to long-form projects, and not seeing anything similar already out there, I founded the <a href="http://www.meetup.com/London-Python-Project-Nights">London Python Project Nights</a> meetup.
+
+                    During this time I have worked on <a href="https://github.com/london-python-project-nights/romaine">Romaine</a>, a BDD framework.
+
+                    My involvement in the python community exemplifies my approach to creating software in a collaborative, encouraging and open environment.
+                </p>
+            </div>
+        </card>
+    </section>
+    <section id="experience">
+        <sheet></sheet>
+        <h1>
+            Professional experience and abilities
+        </h1>
+        <card id="skimlinks">
+            <div class="role-heading">
+                <span class="left">Skimlinks Ltd</span>
+                <span class="centre">Software Engineer</span>
+                <span class="right">03/2015 to Present</span>
+            </div>
+            <table class="role-description"><tr>
+                <td class="prose">
+                    <p>
+                        I have delivered multiple projects within ambitious timelines.
+
+                        One example of this was learning clojure alongside a mature codebase and delivering a new set of endpoints within a month in order to satisfy a key client.
+
+                        As a result of this I have become the go-to engineer for multiple codebases in multiple languages.
+
+                        I have cleaned up and taken ownership of large legacy codebases in the absence of the original contributors, maintaining <a href="http://stats.pingdom.com/vcmf6i3h9nym/1445819/history">100% uptime</a>.
+
+                        With my previous experience in QA I have designed data pipelines with an eye towards validation and testing.
+
+                        I approach challenging projects confidently and competently, ensuring a high level of performance and reliability.
+                    </p>
+
+                    <p>
+                        My recognised technical expertise and ability to solve complex problems within tight deadlines has earned me strategic influence within the wider tech team.
+
+                        This extends to product managers where I have been able to set realistic delivery deadlines, with a discussion of what features were imperative, and what could be delayed in order to meet other business pressures.
+
+                        To guarantee that projects were properly deployed, coded to a high standard, and rigorously tested, I have taken a DevOps approach.
+
+                    </p>
+                    <p>
+
+                        My technical excellence, strategic overview, and <span>ability to take ownership of complex challenges that involve working across multiple technologies and departments</span> means that at present my role is focused on working with the most important clients to ensure delivery of critical features.
+
+                        I am keen to expand this to take more of a leadership role alongside development in my next position.
+                    </p>
+                </td>
+                <td class="jargon">
+                    <h4>Skills:</h4>
+                    <keyword>Back-end development</keyword>
+                    <keyword>DevOps</keyword>
+                    <keyword>TDD</keyword>
+
+                    <h4>Technologies:</h4>
+                    <keyword>python</keyword>
+                    <keyword>php</keyword>
+                    <keyword>clojure</keyword>
+                    <keyword>spark</keyword>
+                    <keyword>mysql</keyword>
+                    <keyword>postgresql</keyword>
+                    <keyword>mongodb</keyword>
+                    <keyword>redis</keyword>
+                    <keyword>s3</keyword>
+                    <keyword>EMR</keyword>
+                    <keyword>docker</keyword>
+                    <keyword>puppet</keyword>
+                </td>
+            </tr></table>
+        </card>
+        <card id="yoyo">
+            <div class="role-heading">
+                <keyword class="left">JustYoyo Ltd</keyword>
+                <keyword class="centre">Senior QA Engineer</keyword>
+                <keyword class="right">06/2014 - 11/2014</keyword>
+            </div>
+            <table class="role-description">
+                <tr>
+                    <td class="prose">
+                        <p>
+                            I introduced QA at JustYoyo, a young startup in mobile payments.
+
+                            I inserted quality into the development and release processes, increasing both internal and external confidence in the product.
+
+                            I implemented an issue tracking system, used this to introduce quality gates before and after development activities, then automated a proportion of the test suite against the product's REST server.
+                        </p>
+                        <p>
+                            I worked a split role between testing and development during the run-up to a major release, developing a django micro-service which delivered GCM and APNS push notifications.
+
+                            In doing this I familiarised myself with the back-end architecture, and was able to assess the unit testing practices that were in use.
+
+                            This lead to a more detailed understanding of the system as a whole, feeding back into my test strategy.
+                        </p>
+                    </td>
+                    <td class="jargon">
+                        <h4>Skills:</h4>
+                        <keyword>Process Improvement</keyword>
+                        <keyword>Project Management</keyword>
+                        <keyword>QA</keyword>
+                        <keyword>Test Automation</keyword>
+                        <keyword>Back-end development</keyword>
+                        <keyword>Kanban</keyword>
+
+                        <h4>Technologies:</h4>
+                        <keyword>TargetProcess</keyword>
+                        <keyword>Appium</keyword>
+                        <keyword>UIAutomation</keyword>
+                        <keyword>Django</keyword>
+                        <keyword>REST</keyword>
+                        <keyword>Javascript</keyword>
+                        <keyword>Python</keyword>
+                    </td>
+                </tr>
+<!-- An utter hack for printing, to get it to fit on two pages -->
+<!--
+
+            </table>
+        </card>
+        <card>
+            <table class="role-description">
+-->
+                <tr>
+                    <td class="prose">
+                        <p>
+                            I instigated continual process improvement by introducing and chairing fortnightly retrospective meetings.
+
+                            Increasing the level of communication within the team also changed way we communicated across the company while helping me to refine the process and training around issue tracking.
+                        </p>
+                    </td>
+                    <td class="jargon">
+                    </td>
+                </tr>
+            </table>
+        </card>
+        <card id="mc-aut">
+            <div class="role-heading">
+                <keyword class="left">Mind Candy Ltd</keyword>
+                <keyword class="centre">Automation Engineer</keyword>
+                <keyword class="right">12/2013 - 04/2014</keyword>
+            </div>
+            <table class="role-description"><tr>
+                <td class="prose">
+                    <p>
+                        As a progression from my first role at Mind Candy I brought quality into the tools development process, and streamlined manual tasks for greater efficiency.
+
+                        I created new background services to integrate first and third party tools.
+
+                        This reduced workload, removed manual steps and shortened iteration times.
+                    </p><p>
+                        I introduced BDD to the team, and formulated system-level tests for their web applications.
+
+                        For this I developed a new test framework: <a href="https://pypi.python.org/pypi/Fattoush">Fattoush</a>.
+
+                        This streamlined test creation and made test deployment more reliable by allowing the same tests to be run either locally, or in parallel across an number of differing remote webdriver sessions, with a simple configuration change.
+                    </p>
+                </td>
+                <td class="jargon">
+                    <h4>Skills:</h4>
+                    <keyword>BDD</keyword>
+                    <keyword>Kanban</keyword>
+                    <keyword>DevOps</keyword>
+                    <keyword>Deployment</keyword>
+
+                    <h4>Technologies:</h4>
+                    <keyword>Python</keyword>
+                    <keyword>Selenium</keyword>
+                    <keyword>Saucelabs</keyword>
+                    <keyword>REST</keyword>
+                    <keyword>Puppet</keyword>
+                    <keyword>Vagrant</keyword>
+                    <keyword>Teamcity</keyword>
+                    <keyword>Gitlab</keyword>
+                    <keyword>Git</keyword>
+                </td>
+            </tr></table>
+        </card>
+        <card id="mc-qa">
+            <div class="role-heading">
+                <keyword class="left">Mind Candy Ltd</keyword>
+                <keyword class="centre">QA Automation Engineer</keyword>
+                <keyword class="right">10/2011 - 12/2013</keyword>
+            </div>
+            <table class="role-description"><tr>
+                <td class="prose">
+                    <div>
+                        <p>
+                            Initially my task was to manage contractors, using Eggplant.
+
+                            I put together a business case for a system which used Sikuli and Selenium in place of Eggplant, and a custom tool for intercepting traffic between the web front end and the back end.
+
+                            I implemented this myself resulting in more stable and easier to maintain tests.
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            I also wrote UI tests for the Unity app which would play every level in the game.
+
+                            For this I developed two systems, of which one was chosen by the development team.
+
+                            The tests written within this system were integrated with the CI server, providing continuous testing on commit.
+                        </p>
+                    </div>
+                </td>
+                <td class="jargon">
+                    <h4>Skills:</h4>
+                    <keyword>Test automation</keyword>
+                    <keyword>Scrum</keyword>
+                    <keyword>DevOps</keyword>
+
+                    <h4>Technologies:</h4>
+                    <keyword>Python</keyword>
+                    <keyword>C# (Mono/Unity)</keyword>
+                    <keyword>Jython</keyword>
+                    <keyword>REST</keyword>
+                    <keyword>Teamcity</keyword>
+                    <keyword>Eggplant</keyword>
+                    <keyword>Sikuli</keyword>
+                    <keyword>Selenium</keyword>
+                    <keyword>Svn</keyword>
+                    <keyword>Git</keyword>
+                </td>
+            </tr></table>
+        </card>
+        <card id="it2">
+            <div class="role-heading">
+                <keyword class="left">IT2 Treasury Solutions</keyword>
+                <keyword class="centre">Product Quality Consultant</keyword>
+                <keyword class="right">07/2009 - 10/2011</keyword>
+            </div>
+            <table class="role-description"><tr>
+                <td class="prose"><p>
+                    My base role involved writing and executing test cases and strategies for testing new features or adopting new technologies.
+
+                    I frequently put myself forward for projects where I could apply and expand my knowledge and skills.
+
+                    My ability to automate long and error-prone manual processes quickly saw my role expand to include scripting and test automation as well as writing tools for others around the business.
+
+                    I was tasked with the maintenance of a legacy automation suite, extending it to gather performance data, and then converting some manual test scripts to CodedUI tests.
+                </p></td>
+                <td class="jargon">
+                    <h4>Skills:</h4>
+                    <keyword>Testing</keyword>
+                    <keyword>QA</keyword>
+                    <keyword>Tools Development</keyword>
+                    <keyword>Test Automation</keyword>
+
+                    <h4>Technologies:</h4>
+                    <keyword>Python</keyword>
+                    <keyword>C# (.Net/CodedUI)</keyword>
+                    <keyword>SQL Server</keyword>
+                    <keyword>VSS</keyword>
+                    <keyword>TFS</keyword>
+                </td>
+            </tr></table>
+        </card>
+        <card id="uni-and-ibm">
+            <div class="role-heading">
+                <b>University of York</b> - BSc (Hons) in Computer Science and Mathematics with Industrial Placement
+            </div>
+            <div class="role-heading">
+                <keyword class="left">IBM UK Ltd</keyword>
+                <keyword class="centre">Industrial Trainee</keyword>
+                <keyword class="right">07/2007 - 06/2008</keyword>
+            </div>
+            <table class="role-description"><tr>
+                <td class="prose">
+                    As part of my degree I spent a year working for IBM Tivoli, accredited under the SFIA scheme.
+
+                    In this role I was tasked with developing an automated testing project from a broadly defined specification which gave scope to shape the project, but mandated using a number of technologies I had never used before.
+                </td>
+                <td class="jargon">
+                    <div>
+                        <h4>Technologies:</h4>
+                        <keyword>Jython</keyword>
+                        <keyword>XML</keyword>
+                        <keyword>STAF/STAX</keyword>
+                        <keyword>CPython</keyword>
+                        <keyword>bash</keyword>
+                        <keyword>Clearcase</keyword>
+                    </div>
+                    <div>
+                        <h4>Skills:</h4>
+                        <keyword>Testing</keyword>
+                        <keyword>Tools Development</keyword>
+                        <keyword>Test Automation</keyword>
+                        <keyword>Cross-platform</keyword>
+                        <keyword>Agile</keyword>
+                    </div>
+                </td>
+            </tr></table>
+        </card>
+    </section>
+</div>
 <div id="top">
     <div id="title">
         Alistair Broomhead
@@ -21,164 +332,21 @@
             <a href="https://github.com/alistair-broomhead">
                 github.com/alistair-broomhead
             </a>
-
             <div>
                 <div>
                     Flat 3, Nesham House, London, N1 5LY
                 </div>
             </div>
-
         </div>
         <div>
-            <a href="mailto:theheadofabroom@outlook.com">
-                theheadofabroom@outlook.com
+            <a href="mailto:alistair.broomhead+jobs@gmail.com">
+                alistair.broomhead+jobs@gmail.com
             </a>
-
             <div>
-                <div>
-                    07816880592
-                </div>
+                <div> 07816880592 </div>
             </div>
-
         </div>
     </div>
 </div>
-<div id="content">
-
-    <div class="card padded">
-        <div>
-            <!-- ngRepeat: qual in qualifications --><p ng-repeat="qual in qualifications" class="ng-binding ng-scope">
-                <b class="ng-binding">University of York</b> - BSc (Hons) in Computer Science and Mathematics with Industrial Placement
-            </p><!-- end ngRepeat: qual in qualifications -->
-        </div>
-    </div>
-<div id="activities" class="section">
-    <div>Career outlook</div>
-
-    <div class="card">
-        <div>
-            <!-- ngRepeat: para in personal_statement --><span ng-repeat="para in personal_statement" ng-bind-html-unsafe="para" class="ng-scope ng-isolate-scope"><p ng-bind-html="trustedHtml" class="ng-binding">At the age of 11 I bought a simple WYSIWYG program for designing computer games. This lead on to learning various dialects of BASIC, even writing a simple blackjack game on my A level graphical calculator. I have continued to pursue a love, both of playing and making games. Recent projects have included ASCII Boggle and tic-tac-toe games developed as part of a team at London Python Dojo events. In addition to team projects I also develop solo projects, including recently a personal website.</p></span><!-- end ngRepeat: para in personal_statement --><span ng-repeat="para in personal_statement" ng-bind-html-unsafe="para" class="ng-scope ng-isolate-scope"><p ng-bind-html="trustedHtml" class="ng-binding">In my professional life I am passionate about making high quality software. My roles have helped me appreciate that you need to work on quality at every point in the lifecycle of a project, and that high quality tools can not only save effort but enable developers and artists to spend more of their time focused on high quality content, rather than the machinery of integrating their work into the project. I have spent 6 years cultivating excellent professional skills in writing tests and software as well as scripting processes, driving process and quality improvement at every opportunity.</p></span><!-- end ngRepeat: para in personal_statement --><span ng-repeat="para in personal_statement" ng-bind-html-unsafe="para" class="ng-scope ng-isolate-scope"><p ng-bind-html="trustedHtml" class="ng-binding">As part of the <a href="http://ldnpydojo.org.uk/">London Python Dojo</a> team I get the opportunity to try out new skills and knowledge. In return I get to help less experienced python developers, encourage best practices such as TDD, and build relationships within the python community. My involvement in the python community exemplifies my approach to creating software in a collaborative, encouraging and open environment.</p></span><!-- end ngRepeat: para in personal_statement --><span ng-repeat="para in personal_statement" ng-bind-html-unsafe="para" class="ng-scope ng-isolate-scope"><p ng-bind-html="trustedHtml" class="ng-binding">Getting involved in hack days, game jams or board game clubs has helped me to create collaborative communities of co-workers. In my experience to date I have always thrived in companies with this kind of culture, where strong working relationships help to drive productivity.</p></span><!-- end ngRepeat: para in personal_statement --><span ng-repeat="para in personal_statement" ng-bind-html-unsafe="para" class="ng-scope ng-isolate-scope"><p ng-bind-html="trustedHtml" class="ng-binding">I am looking for a workplace in which I am a member of a creative, innovative, collaborative team in which I can work with my colleagues to craft a high quality product we all believe in.</p></span><!-- end ngRepeat: para in personal_statement -->
-        </div>
-    </div>
-</div>
-<div id="experience" class="section">
-    <div>
-        Professional experience and abilities
-    </div>
-
-    <!-- ngRepeat: role_name in role_order --><div id="yoyo" class="card ng-scope" ng-repeat="role_name in role_order" ng-init="role=roles[role_name]">
-        <div class="role-heading">
-            <span class="left ng-binding">JustYoyo Ltd</span>
-            <span class="centre ng-binding">Senior QA Engineer</span>
-            <span class="right ng-binding">06/2014 to 11/2014</span>
-        </div>
-        <div class="role-description">
-            <div class="prose">
-                <!-- ngRepeat: para in role.description track by $index --><div ng-repeat="para in role.description track by $index" ng-bind-html-unsafe="para" class="ng-scope ng-isolate-scope"><p ng-bind-html="trustedHtml" class="ng-binding">As a new company JustYoyo had not yet introduced QA. I needed to insert quality into the development and release processes in order to increase both internal and external confidence in the product. To achieve this I introduced an issue tracking system, used this to introduce quality gates before and after development activities, then automated a proportion of the test suite against the product's REST server. The improved specifications received by the developers meant that the right work was carried out with fewer corrections while the new test process caught a number of issues that otherwise may have been released. </p></div><!-- end ngRepeat: para in role.description track by $index --><div ng-repeat="para in role.description track by $index" ng-bind-html-unsafe="para" class="ng-scope ng-isolate-scope"><p ng-bind-html="trustedHtml" class="ng-binding">During the run-up to a major release there was not enough back-end resource to meet the schedule. To remedy this I worked a split role between testing and development, in which I developed a django micro-service which delivered GCM and APNS push notifications. In doing this I familiarised myself with the back-end architecture, and was able to assess the unit testing practices that were in use. This lead to a more detailed understanding of the system as a whole, feeding back into my test strategy.</p></div><!-- end ngRepeat: para in role.description track by $index --><div ng-repeat="para in role.description track by $index" ng-bind-html-unsafe="para" class="ng-scope ng-isolate-scope"><p ng-bind-html="trustedHtml" class="ng-binding">There was nothing in place for continual process improvement; I felt that sequential improvements to the development process would feed into better quality and a faster turn-around of deliverables. To achieve this I introduced and chaired fortnightly retrospective meetings. Improving the level of communication within the team also changed way we communicated across the company while leading me to refine the process and training around issue tracking. </p></div><!-- end ngRepeat: para in role.description track by $index -->
-            </div>
-            <div class="jargon">
-                <h4>Skills:</h4>
-                <!-- ngRepeat: skill in role.skills --><span ng-repeat-start="skill in role.skills" class="ng-binding ng-scope">Process Improvement<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: skill in role.skills --><span ng-repeat-start="skill in role.skills" class="ng-binding ng-scope">Project Management<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: skill in role.skills --><span ng-repeat-start="skill in role.skills" class="ng-binding ng-scope">QA<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: skill in role.skills --><span ng-repeat-start="skill in role.skills" class="ng-binding ng-scope">Test Automation<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: skill in role.skills --><span ng-repeat-start="skill in role.skills" class="ng-binding ng-scope">Back-end development<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: skill in role.skills --><span ng-repeat-start="skill in role.skills" class="ng-binding ng-scope">Kanban<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: skill in role.skills -->
-            </div>
-            <div class="jargon">
-                <h4>Technologies:</h4>
-                <!-- ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">TargetProcess<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">Appium<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">UIAutomation<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">Django<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">REST<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">Javascript<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">Python<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies -->
-            </div>
-        </div>
-    </div><!-- end ngRepeat: role_name in role_order --><div id="mc-aut" class="card ng-scope" ng-repeat="role_name in role_order" ng-init="role=roles[role_name]">
-        <div class="role-heading">
-            <span class="left ng-binding">Mind Candy Ltd</span>
-            <span class="centre ng-binding">Automation Engineer</span>
-            <span class="right ng-binding">12/2013 to 04/2014</span>
-        </div>
-        <div class="role-description">
-            <div class="prose">
-                <!-- ngRepeat: para in role.description track by $index --><div ng-repeat="para in role.description track by $index" ng-bind-html-unsafe="para" class="ng-scope ng-isolate-scope"><p ng-bind-html="trustedHtml" class="ng-binding">As a progression of my earlier role I moved to the Tools Team. My task was to integrate quality into the tools development process and improve efficiency by streamlining manual tasks. I introduced BDD to the tools team, and introduced new background services to integrate first and third party tools. This reduced workload, removed manual steps and shortened iteration times.</p></div><!-- end ngRepeat: para in role.description track by $index --><div ng-repeat="para in role.description track by $index" ng-bind-html-unsafe="para" class="ng-scope ng-isolate-scope"><p ng-bind-html="trustedHtml" class="ng-binding">In order to ensure productivity the tools team wanted system-level tests for their web applications. To efficiently support the target range of browser environments there needed to be a way of developing tests locally, then with a simple configuration change, deploying them across a number of remote webdriver configurations. For this I developed a new test framework: <a href="https://pypi.python.org/pypi/Fattoush">Fattoush</a>. This reduced the amount of work required to produce and configure new tests, as well as making test deployment more reliable.</p></div><!-- end ngRepeat: para in role.description track by $index -->
-            </div>
-            <div class="jargon">
-                <h4>Skills:</h4>
-                <!-- ngRepeat: skill in role.skills --><span ng-repeat-start="skill in role.skills" class="ng-binding ng-scope">BDD<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: skill in role.skills --><span ng-repeat-start="skill in role.skills" class="ng-binding ng-scope">Kanban<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: skill in role.skills --><span ng-repeat-start="skill in role.skills" class="ng-binding ng-scope">DevOps<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: skill in role.skills --><span ng-repeat-start="skill in role.skills" class="ng-binding ng-scope">Deployment<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: skill in role.skills -->
-            </div>
-            <div class="jargon">
-                <h4>Technologies:</h4>
-                <!-- ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">Python<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">Selenium<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">Saucelabs<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">REST<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">Puppet<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">Vagrant<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">Teamcity<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">Gitlab<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">Git<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies -->
-            </div>
-        </div>
-    </div><!-- end ngRepeat: role_name in role_order --><div id="mc-qa" class="card ng-scope" ng-repeat="role_name in role_order" ng-init="role=roles[role_name]">
-        <div class="role-heading">
-            <span class="left ng-binding">Mind Candy Ltd</span>
-            <span class="centre ng-binding">QA Automation Engineer</span>
-            <span class="right ng-binding">10/2011 to 12/2013</span>
-        </div>
-        <div class="role-description">
-            <div class="prose">
-                <!-- ngRepeat: para in role.description track by $index --><div ng-repeat="para in role.description track by $index" ng-bind-html-unsafe="para" class="ng-scope ng-isolate-scope"><p ng-bind-html="trustedHtml" class="ng-binding">Mind Candy wished to automate a proportion of the Moshi Monsters regression pack. Initially my task was to manage contractors in doing this, however the work produced was not maintainable, so the contractors were released and I performed the work myself. I started using Eggplant, however this turned out not to be suitable for the dynamic nature of the product, therefore I put together a business case for a system which used Sikuli and Selenium in place of Eggplant, and a custom tool for intercepting traffic between the web front end and the back end. Once this was implemented the tests were more stable and easier to maintain.</p></div><!-- end ngRepeat: para in role.description track by $index --><div ng-repeat="para in role.description track by $index" ng-bind-html-unsafe="para" class="ng-scope ng-isolate-scope"><p ng-bind-html="trustedHtml" class="ng-binding">After seeing the results of the work on Moshi Monsters, Mind Candy wanted some automated tests for Moshling Rescue. I was to write UI tests for the Unity app which would play every level in the game. For this I developed two systems of which one was chosen by the development team. The tests written within this system were integrated with the CI server, providing continuous testing on commit.</p></div><!-- end ngRepeat: para in role.description track by $index -->
-            </div>
-            <div class="jargon">
-                <h4>Skills:</h4>
-                <!-- ngRepeat: skill in role.skills --><span ng-repeat-start="skill in role.skills" class="ng-binding ng-scope">Test automation<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: skill in role.skills --><span ng-repeat-start="skill in role.skills" class="ng-binding ng-scope">Scrum<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: skill in role.skills --><span ng-repeat-start="skill in role.skills" class="ng-binding ng-scope">DevOps<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: skill in role.skills -->
-            </div>
-            <div class="jargon">
-                <h4>Technologies:</h4>
-                <!-- ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">Python<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">C# (Mono/Unity)<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">Jython<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">REST<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">Teamcity<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">Eggplant<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">Sikuli<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">Selenium<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">Svn<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">Git<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies -->
-            </div>
-        </div>
-    </div><!-- end ngRepeat: role_name in role_order --><div id="it2" class="card ng-scope" ng-repeat="role_name in role_order" ng-init="role=roles[role_name]">
-        <div class="role-heading">
-            <span class="left ng-binding">IT2 Treasury Solutions</span>
-            <span class="centre ng-binding">Product Quality Consultant</span>
-            <span class="right ng-binding">07/2009 to 10/2011</span>
-        </div>
-        <div class="role-description">
-            <div class="prose">
-                <!-- ngRepeat: para in role.description track by $index --><div ng-repeat="para in role.description track by $index" ng-bind-html-unsafe="para" class="ng-scope ng-isolate-scope"><p ng-bind-html="trustedHtml" class="ng-binding">My base role involved writing and executing test cases and strategies for testing new features or adopting new technologies.</p></div><!-- end ngRepeat: para in role.description track by $index --><div ng-repeat="para in role.description track by $index" ng-bind-html-unsafe="para" class="ng-scope ng-isolate-scope"><p ng-bind-html="trustedHtml" class="ng-binding">My ability to automate long and error-prone manual processes quickly saw my role expand to include scripting and test automation. I was asked to write tools which others around the business could use. I was tasked with the maintenance of a legacy automation suite, extending it to gather performance data, and then converting some manual test scripts to CodedUI tests.</p></div><!-- end ngRepeat: para in role.description track by $index --><div ng-repeat="para in role.description track by $index" ng-bind-html-unsafe="para" class="ng-scope ng-isolate-scope"><p ng-bind-html="trustedHtml" class="ng-binding">For this role I learned MS SQL Server, VSS, TFS, C#, and a host of related technologies, as well as frequently putting myself forward for projects where I could apply and expand my knowledge and skills.</p></div><!-- end ngRepeat: para in role.description track by $index -->
-            </div>
-            <div class="jargon">
-                <h4>Skills:</h4>
-                <!-- ngRepeat: skill in role.skills --><span ng-repeat-start="skill in role.skills" class="ng-binding ng-scope">Manual Testing<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: skill in role.skills --><span ng-repeat-start="skill in role.skills" class="ng-binding ng-scope">QA<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: skill in role.skills --><span ng-repeat-start="skill in role.skills" class="ng-binding ng-scope">Tools development<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: skill in role.skills --><span ng-repeat-start="skill in role.skills" class="ng-binding ng-scope">Test automation<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: skill in role.skills -->
-            </div>
-            <div class="jargon">
-                <h4>Technologies:</h4>
-                <!-- ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">Python<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">C# (.Net/CodedUI)<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">SQL Server<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">VSS<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">TFS<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies -->
-            </div>
-        </div>
-    </div><!-- end ngRepeat: role_name in role_order --><div id="ibm" class="card ng-scope" ng-repeat="role_name in role_order" ng-init="role=roles[role_name]">
-        <div class="role-heading">
-            <span class="left ng-binding">IBM UK Ltd</span>
-            <span class="centre ng-binding">Industrial Trainee (Degree Accredited Placement)</span>
-            <span class="right ng-binding">07/2007 to 06/2008</span>
-        </div>
-        <div class="role-description">
-            <div class="prose">
-                <!-- ngRepeat: para in role.description track by $index --><div ng-repeat="para in role.description track by $index" ng-bind-html-unsafe="para" class="ng-scope ng-isolate-scope"><p ng-bind-html="trustedHtml" class="ng-binding">In this role I was tasked with developing an automated testing project from a broadly defined specification which gave scope to shape the project. The tests were for a network monitoring product using a number of technologies I had never used before including Python, XML, STAF/STAX, bash and Rational Clearcase. At the end of my placement I then trained a new industrial trainee to continue the work. My placement exceeded the course requirements expected under the SFIA scheme.</p></div><!-- end ngRepeat: para in role.description track by $index -->
-            </div>
-            <div class="jargon">
-                <h4>Skills:</h4>
-                <!-- ngRepeat: skill in role.skills --><span ng-repeat-start="skill in role.skills" class="ng-binding ng-scope">Manual Testing<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: skill in role.skills --><span ng-repeat-start="skill in role.skills" class="ng-binding ng-scope">Tools development<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: skill in role.skills --><span ng-repeat-start="skill in role.skills" class="ng-binding ng-scope">Test automation<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: skill in role.skills -->
-            </div>
-            <div class="jargon">
-                <h4>Technologies:</h4>
-                <!-- ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">Python<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">Jython<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">XML<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies --><span ng-repeat-start="tech in role.technologies" class="ng-binding ng-scope">Clearcase<i>, </i></span><b ng-repeat-end="" class="ng-scope"> </b><!-- end ngRepeat: tech in role.technologies -->
-            </div>
-        </div>
-    </div><!-- end ngRepeat: role_name in role_order -->
-</div>
-<div id="education" class="section">
-    <div>
-        Qualifications and professional activities
-    </div>
-
-    <div class="card">
-        <div>
-            <!-- ngRepeat: act in professional_activities --><p ng-repeat="act in professional_activities" class="ng-binding ng-scope">
-                <span class="ng-binding">London Python Dojo</span> - Event organiser, speaker, cat herder. Working with PyLadies to increase event diversity.
-            </p><!-- end ngRepeat: act in professional_activities --><p ng-repeat="act in professional_activities" class="ng-binding ng-scope">
-                <span class="ng-binding">BCS Professional Member</span> - Qualified up to ISEB Intermediate Certification for Software Testing
-            </p><!-- end ngRepeat: act in professional_activities -->
-        </div>
-    </div>
-</div>
-</div>
-
-
-</body></html>
+</body>
+</html>
